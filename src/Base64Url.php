@@ -7,7 +7,7 @@ namespace Sopsy\Base64Url;
  * URL-safe Base64 encoding and decoding functions (Base64Url)
  * https://github.com/sopsy/base64url-php
  *
- * @license AGPLv3
+ * @license LGPLv3
  * @author Aleksi "Sopsy" Kinnunen
  */
 class Base64Url
