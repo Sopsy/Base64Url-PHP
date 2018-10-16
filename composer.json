@@ -2,7 +2,7 @@
     "name": "sopsy/base64url-php",
     "description": "Base64Url encoder and decoder implementation for PHP",
     "keywords": ["base64", "base64url"],
-    "homepage": "https://github.com/Sopsy/base64url-php",
+    "homepage": "https://github.com/Sopsy/Base64Url-PHP",
     "type": "library",
     "license": "LGPL-3.0-or-later",
     "autoload": {
@@ -18,7 +18,8 @@
         }
     ],
     "require": {
-        "php": "^7.0"
+        "php": "^7.0",
+        "ext-mbstring": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.4"
