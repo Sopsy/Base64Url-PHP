@@ -1,0 +1,23 @@
+{
+    "name": "sopsy/base64url-php",
+    "description": "Base64Url encoder and decoder implementation for PHP",
+    "keywords": ["base64", "base64url"],
+    "homepage": "https://github.com/Sopsy/base64url-php",
+    "type": "library",
+    "license": "AGPLv3",
+    "autoload": {
+        "psr-4": {
+            "Sopsy\\Base64Url\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aleksi Kinnunen",
+            "email": "code@npn.fi",
+            "homepage": "https://github.com/Sopsy"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^7.4"
+    }
+}
