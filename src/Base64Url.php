@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Sopsy\Base64Url;
 
+use InvalidArgumentException;
+
 /**
  * URL-safe Base64 encoding and decoding functions (Base64Url)
  * https://github.com/sopsy/base64url-php
@@ -40,6 +42,7 @@ class Base64Url
      *
      * @param string $string encoded string
      * @return string decoded string
+     * @throws InvalidArgumentException If the provided string is not valid Base64 data
      */
     static public function decode(string $string): string
     {
@@ -50,7 +53,13 @@ class Base64Url
         // Base64 uses + and / in place of - and _
         $b64 = strtr($b64, '-_', '+/');
 
+        $decoded = base64_decode($b64, true);
+
+        if ($decoded === false) {
+            throw new InvalidArgumentException('Could not decode, invalid data');
+        }
+
         // Return the decoded string
-        return base64_decode($b64);
+        return $decoded;
     }
 }
