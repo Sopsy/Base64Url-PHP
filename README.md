@@ -1,4 +1,4 @@
-# php-base64url
+# Base64Url-PHP
 Base64Url encoder and decoder implementation for PHP 7.0+
 
 

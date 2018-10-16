@@ -4,7 +4,7 @@
     "keywords": ["base64", "base64url"],
     "homepage": "https://github.com/Sopsy/base64url-php",
     "type": "library",
-    "license": "AGPLv3",
+    "license": "LGPLv3",
     "autoload": {
         "psr-4": {
             "Sopsy\\Base64Url\\": "src/"
