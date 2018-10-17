@@ -5,7 +5,7 @@ Base64Url encoder and decoder implementation for PHP 7.0+
 # Usage
 
 To encode:
-```
+```PHP
 // With stripped padding
 echo Base64Url::encode('When I grow up, I want to be a watermelon', true);
 // Expected output: V2hlbiBJIGdyb3cgdXAsIEkgd2FudCB0byBiZSBhIHdhdGVybWVsb24
@@ -20,7 +20,7 @@ echo Base64Url::encode('When I grow up, I want to be a watermelon', false);
 ```
 
 To decode:
-```
+```PHP
 // A string without padding
 echo Base64Url::decode('V2hlbiBJIGdyb3cgdXAsIEkgd2FudCB0byBiZSBhIHdhdGVybWVsb24');
 // Expected output: When I grow up, I want to be a watermelon
