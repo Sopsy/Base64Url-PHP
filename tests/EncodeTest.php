@@ -2,11 +2,11 @@
 declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
-use \Sopsy\Base64Url\Base64Url;
+use Sopsy\Base64Url\Base64Url;
 
 final class EncodeTest extends TestCase
 {
-    public function testWithPadding()
+    public function testWithPadding(): void
     {
         // No padding characters
         $this->assertEquals(
@@ -27,7 +27,7 @@ final class EncodeTest extends TestCase
         );
     }
 
-    public function testWithoutPadding()
+    public function testWithoutPadding(): void
     {
         // No padding characters
         $this->assertEquals(

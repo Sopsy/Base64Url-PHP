@@ -2,11 +2,11 @@
 declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
-use \Sopsy\Base64Url\Base64Url;
+use Sopsy\Base64Url\Base64Url;
 
 final class DecodeTest extends TestCase
 {
-    public function testWithPadding()
+    public function testWithPadding(): void
     {
         // No padding characters
         $this->assertEquals(
@@ -27,7 +27,7 @@ final class DecodeTest extends TestCase
         );
     }
 
-    public function testWithoutPadding()
+    public function testWithoutPadding(): void
     {
         // One padding character stripped
         $this->assertEquals(
@@ -42,22 +42,23 @@ final class DecodeTest extends TestCase
         );
     }
 
-    public function testInvalidData()
+    public function testInvalidData(): void
     {
         $this->expectException(InvalidArgumentException::class);
+        /** @noinspection UnusedFunctionResultInspection We expect it to throw an exception */
         Base64Url::decode(' V2hlbiBJIGdyb3cgdXAsIEkgd2FudCB0byBiZSBhIHdhdGVybWVsb24=');
     }
 
-    public function testEmptyData()
+    public function testEmptyData(): void
     {
         $this->assertEquals(
             '',
-            Base64Url::decode("")
+            Base64Url::decode('')
         );
 
         $this->assertEquals(
             '',
-            Base64Url::encode("")
+            Base64Url::encode('')
         );
     }
 }

@@ -21,7 +21,7 @@ class Base64Url
      * @param bool $stripPadding Whether to strip the padding or not (='s at the end)
      * @return string encoded string
      */
-    static public function encode(string $string, bool $stripPadding = true): string
+    public static function encode(string $string, bool $stripPadding = true): string
     {
         // Start with regular base64 string
         $b64 = base64_encode($string);
@@ -44,7 +44,7 @@ class Base64Url
      * @return string decoded string
      * @throws InvalidArgumentException If the provided string is not valid Base64 data
      */
-    static public function decode(string $string): string
+    public static function decode(string $string): string
     {
         // First, Base64 needs padding to the end
         // "In Base64 encoding, the length of output encoded String must be a multiple of 3.
