@@ -1,4 +1,6 @@
 # Base64Url-PHP
+# DEPRECATED, REPLACED BY https://github.com/Sopsy/BaseNEncoder
+
 Base64Url encoder and decoder implementation for PHP 7.0+
 
 
